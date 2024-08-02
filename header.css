@@ -1,9 +1,10 @@
-.cabeçalho_menu-hamburguer {
+.cabeçalho__menu-hamburguer {
     width: 24px;
     height: 24px;
+    display: inline-block;
     background-image: url("menu-hamburguer.png");
     background-repeat: no-repeat;
-    display: inline-block;
+    background-position: center;
 }
 
 .cabeçalho {
@@ -11,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .container {
@@ -21,3 +23,25 @@
 .container__imagem {
     padding: 1em;
 }
+
+.imagem{
+    max-width: 200px;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
